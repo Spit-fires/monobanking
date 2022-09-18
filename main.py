@@ -2,7 +2,7 @@ import math
 from rich.pretty import pprint
 from rich.console import Console
 from rich.table import Table
-from rich import Print as rprint
+from rich import print as rprint
 from rich.prompt import Prompt as prompt
 import os
 
