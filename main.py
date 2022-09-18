@@ -12,11 +12,7 @@ loaners = {}
 bankbal = 0
 terminalsize = os.get_terminal_size()
 width = terminalsize.lines
-linebreaker = """      
-  ___ 
- |___|
-      
-      """
+linebreaker = "-"
 loanlist = Table(title="Loaner list")
   
 loanlist.add_column("Name", style="cyan", no_wrap=True)
