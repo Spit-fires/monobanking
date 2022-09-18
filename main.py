@@ -13,6 +13,7 @@ bankbal = 0
 terminalsize = os.get_terminal_size()
 width = terminalsize.lines
 linebreaker = "-"
+choice = ""
 loanlist = Table(title="Loaner list")
   
 loanlist.add_column("Name", style="cyan", no_wrap=True)
@@ -31,7 +32,7 @@ def makegui():
   print("Balance: ", bankbal)
   print(linebreaker.ljust(width, linebreaker))
   print("Actions: \n 1 = Add a loaner \n 2 = Remove a loaner")
-  choice = prompt.ask("What do you want to do?", choices=["1", "2"])
+  choice = input("What do you want to do? ")
   
   
 def updategui():
