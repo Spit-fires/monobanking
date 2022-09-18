@@ -33,7 +33,7 @@ def makegui():
   print(linebreaker.ljust(width, linebreaker))
   print("Balance: " + bankbal)
   print(linebreaker.ljust(width, linebreaker))
-  print("Actions:" + \n + "1 = Add a loaner" + \n "2 = Remove a loaner")
+  print("Actions: \n 1 = Add a loaner \n 2 = Remove a loaner")
   choice = prompt.ask("What do you want to do?", choices=["1", "2"])
   
   
