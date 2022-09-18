@@ -33,14 +33,10 @@ def makegui():
   print(linebreaker.ljust(width, linebreaker))
   print("Actions: \n 1 = Add a loaner \n 2 = Remove a loaner")
   choice = input("What do you want to do? ")
-  
-  
-def updategui():
-  for name in loaners.keys():
-      loanlist.add_row(name, loaners[name])
 
-
-def addloaner(name, amount):
+def addloaner():
+  name = input("Name:")
+  amount = input("Amount:")
   if name in loaners == true:
     error = "User already has a loan!"
     return error
@@ -51,7 +47,8 @@ def addloaner(name, amount):
     success = "Success"
     return success
   
-def removeloaner(name):
+def removeloaner():
+  name = input("Name:")
   if name not in loaners == true:
     error = "User has not taken a loan yet!"
     return error
@@ -63,36 +60,27 @@ def removeloaner(name):
     return success
   
 def clear():
- 
-
     # for windows
-
     if os.name == 'nt':
-
-        _ = os.system('cls')
- 
-
+        os.system('cls')
     # for mac and linux(here, os.name is 'posix')
-
     else:
-
-        _ = os.system('clear')
+        os.system('clear')
+        
+def updategui():
+  for name in loaners.keys():
+      loanlist.add_row(name, loaners[name]
+   clear()
+   makegui()
 
 def main():
   makegui()
   if choice == "1":
-    name = input("Name:")
-    amount = input("Amount:")
-    addloaner(name, amount)
+    addloaner()
     updategui()
-    clear()
-    makegui()
-  if choice == "2":
-    name = input("Name:")
-    removeloaner(name)
+  if choice == "2": 
+    removeloaner()
     updategui()
-    clear()
-    makegui()
   
 while True: 
   main()
