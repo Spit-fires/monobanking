@@ -45,7 +45,7 @@ def addloaner(name, amount):
     return error
   else:
     loaners[name] = amount
-    newmoney = bankbal-int(loaners[name])
+    newmoney = int(bankbal) - int(loaners[name])
     money = int(newmoney)
     success = "Success"
     return success
@@ -55,7 +55,7 @@ def removeloaner(name):
     error = "User has not taken a loan yet!"
     return error
   else:
-    newmoney = bankbal+int(loaners[name])
+    newmoney = int(bankbal) + int(loaners[name])
     money = int(newmoney)
     del loaners[name]
     success = "Success"
