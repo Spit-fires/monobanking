@@ -10,7 +10,7 @@ import os
 console = Console()
 loaners = {}
 bankbal = 0
-width = os.get_terminal_size()
+width = int(os.get_terminal_size())
 linebreaker = """      
   ___ 
  |___|
